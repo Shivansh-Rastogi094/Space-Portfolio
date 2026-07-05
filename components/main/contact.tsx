@@ -91,11 +91,11 @@ const ContactBase = () => {
         process.env.NEXT_PUBLIC_APP_SERVICE_ID || "",
         process.env.NEXT_PUBLIC_APP_TEMPLATE_ID || "",
         {
-          from_name: form.name,
-          to_name: "Shubham",
+          name: form.name,
           reply_to: form.email.trim().toLowerCase(),
           to_email: process.env.NEXT_PUBLIC_APP_EMAILJS_RECEIVER || "",
           message: form.message,
+          time: new Date().toLocaleString(),
         },
         process.env.NEXT_PUBLIC_APP_EMAILJS_KEY || ""
       )
