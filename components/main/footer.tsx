@@ -35,4 +35,6 @@ export const Footer = () => {
       </div>
     </div>
   );
+
+  // trail commit to launch env variables
 };
